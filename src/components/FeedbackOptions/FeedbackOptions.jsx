@@ -1,5 +1,6 @@
 import toUpperCaseFirstLetter from '../../Utils/function';
 import PropTypes from 'prop-types';
+import Button from './FeedbackOptions.styled';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   const optionsValue = Object.keys(options);
@@ -8,7 +9,7 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
     <div>
       {optionsValue.map(optionValue => {
         return (
-          <button
+          <Button
             key={optionValue}
             type="button"
             onClick={() => {
@@ -16,7 +17,7 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
             }}
           >
             {toUpperCaseFirstLetter(optionValue)}
-          </button>
+          </Button>
         );
       })}
     </div>

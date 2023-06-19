@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Notification from 'components/Notification';
+import Reviews from './Statistics.styled';
 
 class Statistics extends Component {
   render() {
@@ -11,11 +12,11 @@ class Statistics extends Component {
         <h2>Statistics</h2>
         {good > 0 || neutral > 0 || bad > 0 ? (
           <div>
-            <p>Good: {good}</p>
-            <p>Neutral: {neutral}</p>
-            <p>Bad: {bad}</p>
-            <p>Total: {total}</p>
-            <p>Positive feedback: {positivePercentage}%</p>
+            <Reviews>Good: {good}</Reviews>
+            <Reviews>Neutral: {neutral}</Reviews>
+            <Reviews>Bad: {bad}</Reviews>
+            <Reviews>Total: {total}</Reviews>
+            <Reviews>Positive feedback: {positivePercentage}%</Reviews>
           </div>
         ) : (
           <Notification message="There is no feedback" />
