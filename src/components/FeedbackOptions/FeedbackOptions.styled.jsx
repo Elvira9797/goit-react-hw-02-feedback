@@ -7,6 +7,12 @@ const Button = styled.button`
   border-radius: 4px;
   font-size: 16px;
   cursor: pointer;
+  transition: background 250ms linear, color 250ms linear;
+  &:active,
+  &:hover {
+    background: #508ef0;
+    color: white;
+  }
   &:not(:last-child) {
     margin-right: 8px;
   }
